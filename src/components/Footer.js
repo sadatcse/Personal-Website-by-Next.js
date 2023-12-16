@@ -21,9 +21,9 @@ const Footer = () => {
                 </div>
 
         <div className='space-x-6'>
-                    <a href="/privacypolicy" className='hover:text-slate-400'>Privacy Policy</a>
-                    <a href="/termsofservice" className='hover:text-slate-400'>Terms of Service</a>
-                    <a href="/cookiessettings" className='hover:text-slate-400'>Cookies Settings</a>
+        <Link className="hover:text-slate-400" href="/privacypolicy">Privacy Policy</Link>
+        <Link className="hover:text-slate-400" href="/termsofservice">Terms of Service</Link>
+        <Link className="hover:text-slate-400" href="/cookiessettings">Cookies Settings</Link>
                 </div>
       </Layout>
     </footer>

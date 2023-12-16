@@ -15,7 +15,7 @@ const termsofservice = () => {
           <h1 className="text-3xl font-bold mb-4">Terms of Service</h1>
           
           <p className="mb-4">
-            These Terms of Service ("Terms") govern your use of the Sadat Khan website ("Site") operated by Sadat Khan ("us," "we," or "our"). Please read these Terms carefully before accessing or using our Site.
+            These Terms of Service (&quot;Terms&quot;) govern your use of the Sadat Khan website (&quot;Site&quot;) operated by Sadat Khan (&quot;us,&quot; &quot;we,&quot; or &quot;our&quot;). Please read these Terms carefully before accessing or using our Site.
           </p>
           
           <h2 className="text-xl font-semibold mb-4">Accounts</h2>
