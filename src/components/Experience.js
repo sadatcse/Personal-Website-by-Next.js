@@ -61,24 +61,43 @@ const Experience = () => {
             style={{ scaleY: scrollYProgress }}
           />
           <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
+
+            <Details
+              position="Full Stack Engineer"
+              company="Data IT"
+              companyLink="https://datait.com.bd/"
+              time="2025–Present"
+              address="Dhaka, Bangladesh"
+              work="As a Full Stack Engineer at Data IT, I develop and maintain scalable web applications, manage both frontend and backend development processes, and contribute to modern software solutions for clients. My responsibilities include building responsive user interfaces, developing APIs, managing databases, optimizing application performance, and collaborating with cross-functional teams to deliver efficient and user-friendly digital products. I also support deployment, maintenance, and continuous improvement of web platforms and business systems."
+            />
+
             <Details
               position="Assistant Manager"
-              company="Al-Amin Electronics               "
+              company="Resilient Slope Ltd."
+              companyLink="https://www.resilientslope.com/"
+              time="2024–2025"
+              address="West Shewrapara, Dhaka, Bangladesh"
+              work="As an integral part of the Bangladesh office, I oversaw client service maintenance and streamlined operational procedures. I managed data using Excel, maintained client records, performed financial calculations, processed salary computations, and ensured the company's website remained updated and functional. My role contributed to efficient operations, accurate record-keeping, and a strong online presence."
+            />
+
+            <Details
+              position="Assistant Manager"
+              company="Al-Amin Electronics"
               companyLink="https://www.facebook.com/alaminelec5"
-              time="2020-2023"
-              address="Mohammadpur., Dhaka, Bangladesh"
+              time="2020–2023"
+              address="Mohammadpur, Dhaka, Bangladesh"
               work="As an integral part of a home appearance servicing company, I oversee client service maintenance and streamline operational procedures. I meticulously manage data using Excel, handling everything from client records to financial calculations. Additionally, I ensure accurate salary computations for our team while also maintaining and updating our company's website. Overall, my role ensures efficient operations, precise record-keeping, and an engaging online presence for our services."
             />
 
-
             <Details
-              position="Junior Wordpress Devloper"
+              position="Junior WordPress Developer"
               company="Little Bytes"
               companyLink="https://littlebytes.net/"
-              time="2018-2020"
+              time="2018–2020"
               address="Motijheel, Dhaka, Bangladesh"
               work="I specialize in setting up hosting accounts and crafting WordPress websites for clients. From seamless WordPress installations to theme selection and content setup, I ensure a smooth process. My role involves understanding client needs, translating them into visually captivating websites that align with their brand. With expertise in WordPress, I create user-friendly interfaces and technically sound, secure websites. Overall, I empower clients to establish and manage their online presence effortlessly."
             />
+
           </ul>
         </div>
         </div>

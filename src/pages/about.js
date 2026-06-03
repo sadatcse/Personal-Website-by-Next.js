@@ -7,6 +7,7 @@ import { useEffect, useRef } from "react";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
+import Certification from "@/components/Certification";
 import AnimatedText from "@/components/AnimatedText";
 import TransitionEffect from "@/components/TransitionEffect";
 
@@ -48,7 +49,7 @@ export default function About() {
       >
         <Layout className="pt-16">
           <AnimatedText
-            text="About ME"
+            text="About Me"
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
 
@@ -59,12 +60,18 @@ export default function About() {
                 BIOGRAPHY
               </h2>
               <p className="font-medium ">
-              As an aspiring developer, I bring a specialized skill set in React and its associated
-            frameworks. Proficient in HTML, CSS, and JavaScript, I am actively seeking internship
-            or job opportunities to apply and enhance my knowledge in these technologies.
+                My name is Sadat, and I was born in Kushtia, Bangladesh. I started my journey in web development as a WordPress developer when WordPress version 2.6 was released. In the beginning, I designed several websites for local clients in Kushtia, which helped me build my passion for technology and design.
+
+                Later, I moved to Dhaka and worked on many creative and unique website projects. My first professional experience was designing WordPress websites for LeadSoft, one of the leading software companies in Bangladesh. After that, with inspiration and support from my brother, I joined LittleBytes.
+
+                As technology continued to evolve, I became interested in modern web development and started learning the MERN stack. Over time, I developed my skills in full stack development while also working as an Assistant Manager in two different companies. Those experiences helped me improve both my technical and management skills.
+
+
+
+
               </p>
               <p className="my-4 font-medium">
-              With hands-on experience in building responsive web applications, I thrive on collaborative projects that push the boundaries of user interface design. Seeking roles where I can contribute creativity and expertise in front-end development within a dynamic team environment.
+                Currently, I am working as a Full Stack Engineer at Data IT, located in Shyamoli, Dhaka. I believe in continuous learning and self-improvement. Today, on June 3, 2026, I am focusing on Deep Learning and AI technologies. Learning new things every day and exploring new ideas is something I truly enjoy.
               </p>
             </div>
             <div className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark 
@@ -90,7 +97,7 @@ export default function About() {
             xl:items-center md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={3} />+
+                  <AnimatedNumberFramerMotion value={15} />+
                 </span>
                 <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
                 xl:text-center md:text-lg sm:text-base xs:text-sm">
@@ -100,7 +107,7 @@ export default function About() {
 
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={6} />+
+                  <AnimatedNumberFramerMotion value={11} />+
                 </span>
                 <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
                 xl:text-center md:text-lg sm:text-base xs:text-sm">
@@ -110,7 +117,7 @@ export default function About() {
 
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={1} />+
+                  <AnimatedNumberFramerMotion value={4} />+
                 </span>
                 <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
                 xl:text-center md:text-lg sm:text-base xs:text-sm">
@@ -123,6 +130,7 @@ export default function About() {
           <Skills />
           <Experience />
           <Education />
+          <Certification />
         </Layout>
       </main>
     </>

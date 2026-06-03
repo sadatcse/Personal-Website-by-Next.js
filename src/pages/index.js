@@ -12,7 +12,7 @@ import { TypeAnimation } from "react-type-animation";
 
 
 export default function Home() {
-  
+
   return (
     <>
       <Head>
@@ -39,23 +39,23 @@ export default function Home() {
               />
             </div>
             <div className="flex w-1/2 flex-col items-center self-center lg:w-full lg:text-center ">
-            <p className="text-5xl font-semibold mb-5">Hey, I am Sadat Khan</p>
-            <TypeAnimation sequence={[
+              <p className="text-5xl font-semibold mb-5">Hey, I am Sadat Khan</p>
+              <TypeAnimation sequence={[
 
-        'React Developer',
-        1000, 
-        'UI/UX Designer',
-        1000,
-        'Web Devloper',
-        1000
-      ]}
-      wrapper="span"
-      className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
-      speed={50}
-      repeat={Infinity}
-    />
+                'AI Full Stack Developer',
+                1000,
+                'MERN Stack Developer',
+                1000,
+                'Full Stack Developer',
+                1000
+              ]}
+                wrapper="span"
+                className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
+                speed={50}
+                repeat={Infinity}
+              />
               <p className="my-4 text-base text-center font-medium md:text-sm sm:!text-xs">
-              As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects and articles, showcasing my expertise in React.js and web development.
+                As a skilled AI full-stack developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects and articles, showcasing my expertise in React.js and web development.
               </p>
               <div className="mt-2 flex items-center self-start lg:self-center">
                 <Link

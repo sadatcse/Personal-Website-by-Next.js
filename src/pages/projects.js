@@ -236,7 +236,7 @@ export default function Projects() {
                 summary="Hydrabad Technology offers a seamless user experience with individualized cart data, secure registration/login, informative error alerts, and exclusive access to protected content. With a unique, customizable service design powered by MongoDB, dynamic animations, and automatic copyright updates, our site prioritizes user convenience and innovation."
                 img={proj3}
                 technology ="React,Tailwind,Nodejs,Expressjs,Mongodb,Firebase"
-                link="https://some-code-error-but99ok.surge.sh//"
+                link="https://some-code-error-but99ok.surge.sh/"
                 client_side="https://github.com/sadatcse/Hydrabad-Technology-Brand-Shop-Client-side-"
                 server_side="https://github.com/sadatcse/Hydrabad-Technology-Brand-Shop-Server-side"
               />
