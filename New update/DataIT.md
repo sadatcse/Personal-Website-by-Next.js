@@ -1,0 +1,135 @@
+# 🚀 Data IT - Your Digital Growth Partner
+
+🌐 **Live Website:** [datait.com.bd](https://www.datait.com.bd)
+
+A premium, highly-responsive agency portfolio and custom software solutions platform for **Data IT**. This application showcases professional digital services, software products, and features dynamic animations, search engine optimization (SEO), and contact workflows.
+
+---
+
+## 🛠️ Tech Stack & Key Technologies
+
+The platform is built using modern web development standards to ensure maximum performance, responsiveness, and premium aesthetics:
+
+*   **Core Framework:** [React v18](https://react.dev/)
+*   **Build Tool & Bundler:** [Vite](https://vitejs.dev/) (Fast Hot Module Replacement)
+*   **Styling & UI:** 
+    *   [Tailwind CSS](https://tailwindcss.com/) (Utility-first styling)
+    *   [DaisyUI](https://daisyui.com/) (Component library for Tailwind)
+*   **Routing:** [React Router DOM v6](https://reactrouter.com/) (Dynamic client-side routing)
+*   **Animations:** [Framer Motion](https://www.framer.com/motion/) (Smooth transitions and scroll animations)
+*   **SEO Management:** [React Helmet Async](https://github.com/staylor/react-helmet-async) (Dynamic meta tags, titles, and SEO keywords for every route)
+*   **Email Integration:** [@emailjs/browser](https://www.emailjs.com/) (Direct secure contact form submission)
+*   **Feedback Dialogs:** [SweetAlert2](https://sweetalert2.github.io/) (Clean notification modals)
+*   **Sliders & Carousels:** [React Slick](https://react-slick.neostack.com/) & [Slick Carousel](https://kenwheeler.github.io/slick/) (Responsive showcases and testimonials)
+
+---
+
+## 🌟 Key Features
+
+1. **Dynamic SEO Optimization:** Every page renders custom meta tags, title tags, descriptions, and site images using `React Helmet Async` to boost search engine visibility and ranking.
+2. **Interactive Contact System:**
+    * Built-in human verification system (custom CAPTCHA) to prevent bot spam.
+    * Integrated with **EmailJS** for direct client message routing.
+    * Toast alerts and modals via **SweetAlert2** confirming receipt.
+3. **Comprehensive Service Portfolios:** Interactive pages detailing agency capabilities:
+    * **Software Products:** Gym Management System (GMS), Restaurant Management System (RMS), Rice Mill Management System (RiceMMS).
+    * **Website & Content:** Custom Web Apps, E-commerce, Maintenance, and Web Design.
+    * **Organic Growth (SEO):** Professional SEO, E-commerce SEO, Garments SEO, Local SEO, and Travel Agency SEO.
+    * **Branding:** Corporate Branding, Personal Branding, Re-Branding.
+    * **Design:** Graphic Design, UI/UX Design.
+    * **SMM & Others:** Social Media Marketing, Video Production, and PR Agency.
+4. **Dynamic Blog System:** Grid layout listing articles with individual dynamic routing (`/blog/:id`) to read detailed posts.
+5. **Careers & Team:** Sections showing job listings/applications and team member showcases.
+6. **Responsive Layout & Visuals:** Sleek dark-mode accents, gradient interfaces, responsive navigation menus, interactive footer links, and Google Maps integration.
+
+---
+
+## 📂 Project Structure
+
+```bash
+src/
+├── assets/             # Images, graphics, and background illustrations
+├── components/         # Reusable UI components
+│   ├── About/          # Components for the About Us page
+│   ├── Home/           # Hero, Services, Choice, CTA, Partner, Testimonials, FAQ
+│   ├── SEO/            # React Helmet SEO wrapper component
+│   ├── Title/          # Section header title components
+│   ├── banner/         # Header/Banner components
+│   └── common/         # Layout essentials (Navbar, Footer, ScrollToTop)
+├── hooks/              # Custom React hooks
+├── pages/              # Page layouts and route views
+│   ├── default/        # Root layout (Root.jsx) and Error page (Error404.jsx)
+│   ├── Services/       # Service categories (Branding, Design, SEO, Software, Web)
+│   ├── AboutUs.jsx     # Company overview, mission, and vision
+│   ├── Blog.jsx        # Blog list page
+│   ├── BlogDetails.jsx # Read single blog view
+│   ├── Careers.jsx     # Job listings page
+│   ├── ContactUs.jsx   # Contact page with forms & locations
+│   ├── Home.jsx        # Landing page
+│   └── Portfolios.jsx  # Completed projects showcase page
+├── index.css           # Global Tailwind and font definitions
+└── main.jsx            # Router and app entry point
+```
+
+---
+
+## ⚡ Getting Started
+
+Follow these steps to run the website locally on your system:
+
+### 1. Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed (Node 18+ is recommended).
+
+### 2. Clone the Repository
+```bash
+git clone https://github.com/sadatcse/Data-IT.git
+cd Data-IT
+```
+
+### 3. Install Dependencies
+```bash
+npm install
+```
+
+### 4. Configure Environment Variables
+Create a `.env` file in the root directory and add your EmailJS configuration:
+```env
+VITE_service=YOUR_EMAILJS_SERVICE_ID
+VITE_tamplet=YOUR_EMAILJS_TEMPLATE_ID
+VITE_apiKey=YOUR_EMAILJS_PUBLIC_KEY
+```
+
+### 5. Run the Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
+
+### 6. Build for Production
+To build the project for production, run:
+```bash
+npm run build
+```
+This generates a production-ready `dist` folder. To preview the build locally, run:
+```bash
+npm run preview
+```
+
+---
+
+## 📍 Office Locations
+
+*   **Bangladesh Office:**
+    Shaymoli 3 no road, House no. 27/1/B,
+    Apon Heights, Flat 10-B, Dhaka
+    *Phone:* (+880) 1332776617
+
+*   **US Office:**
+    3414-3498 Normandy Brk Rd, Dallas,
+    TX 75212, USA
+    *Phone:* +1-817-412-9800
+
+---
+
+## 📧 Support & Inquiries
+For sales and partnerships, reach out to **sales@datait.com.bd** or contact the author at **sadatcse@gmail.com**.

@@ -5,9 +5,13 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import proj1 from "../../public/images/projects/ParcelManagement-webaps.jpg";
-import proj2 from "../../public/images/projects/food.jpg";
-import proj3 from "../../public/images/projects/Hydrabad.jpg";
+import imgMDL from "../../public/images/projects/MDL.jpg";
+import imgMultigymNextJs from "../../public/images/projects/multigym-next-js.jpg";
+import imgChefSpecial from "../../public/images/projects/chefs-special.png";
+import imgDataIT from "../../public/images/projects/DataIT.jpg";
+import imgSkyroot from "../../public/images/projects/Skyroot.jpg";
+import imgResilientSlope from "../../public/images/projects/ResilientSlope.jpg";
+import imgMultigym from "../../public/images/projects/multigym.png";
 import { CgWebsite  } from "react-icons/cg";
 import { SiGithub } from "react-icons/si";
 import { FaServer } from "react-icons/fa";
@@ -68,40 +72,37 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
           {summary}
         </p>
         <p className="my-2 rounded-md font-medium  text-dark dark:text-light sm:text-sm">Technology Use :{technology}</p>
-        <div className="mt-2 flex items-center">
-          <Link
-            href={link}
-            target={"_blank"}
-            className="ml-4 rounded-lg
-             bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark 
-             sm:px-4 sm:text-base
-            "
-            aria-label="Crypto Screener Application"
-          >
-            Visit Project
-          </Link>
-          <Link
-            href={client_side}
-            target={"_blank"}
-            className="ml-4 rounded-lg
-            bg-red-600 p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark 
-             sm:px-4 sm:text-base
-            "
-            aria-label="Crypto Screener Application"
-          >
-            Client Side
-          </Link>
-          <Link
-            href={server_side}
-            target={"_blank"}
-            className="ml-4 rounded-lg
-            bg-orange-500	p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark 
-             sm:px-4 sm:text-base
-            "
-            aria-label="Crypto Screener Application"
-          >
-            Server Side
-          </Link>
+        <div className="mt-2 flex flex-wrap items-center gap-2">
+          {link && (
+            <Link
+              href={link}
+              target={"_blank"}
+              className="rounded-lg bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark sm:px-4 sm:text-base"
+              aria-label={`Visit ${title}`}
+            >
+              Visit Project
+            </Link>
+          )}
+          {client_side && (
+            <Link
+              href={client_side}
+              target={"_blank"}
+              className="rounded-lg bg-red-600 p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark sm:px-4 sm:text-base"
+              aria-label={`View client code for ${title}`}
+            >
+              {server_side ? "Client Side" : "GitHub"}
+            </Link>
+          )}
+          {server_side && (
+            <Link
+              href={server_side}
+              target={"_blank"}
+              className="rounded-lg bg-orange-500 p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark sm:px-4 sm:text-base"
+              aria-label={`View server code for ${title}`}
+            >
+              Server Side
+            </Link>
+          )}
         </div>
       </div>
     </article>
@@ -140,44 +141,44 @@ const Project = ({ title, type, img, link, technology,summary,client_side,server
         />
       </Link>
       <div className="mt-4 flex w-full flex-col items-start justify-between">
-      <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl ">
-            {title} <span className="text-xl font-medium text-primary dark:text-primaryDark lg:text-lg md:text-base">{type}</span>
-          </h2>
+        <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl ">
+          {title} <span className="text-xl font-medium text-primary dark:text-primaryDark lg:text-lg md:text-base">{type}</span>
+        </h2>
         
        
         <p className="my-2 rounded-md font-medium  text-dark dark:text-light sm:text-sm">Technology Use :{technology}</p>
 
-        <Link
-          href={link}
-          target={"_blank"}
-          className="underline-offset-2 hover:underline"
-        >
-          
-        </Link>
-        <div className="flex w-full items-center  justify-start">
-          <Link
-            href={client_side}
-            target={"_blank"}
-            className="my-2 w-8 md:w-6"
-            aria-label={title}
-          >
-            <CgWebsite size={40} />
-          </Link>
-          <Link
-            href={client_side}
-            target={"_blank"}
-            className="ms-4 w-8 md:w-6"
-            aria-label={title}
-          >
-            <SiGithub size={40} />
-          </Link> <Link
-            href={server_side}
-            target={"_blank"}
-            className="ms-4 w-8 md:w-6"
-            aria-label={title}
-          >
-            <FaServer size={40} />
-          </Link>
+        <div className="flex w-full items-center justify-start mt-2">
+          {link && (
+            <Link
+              href={link}
+              target={"_blank"}
+              className="my-2 w-8 md:w-6 text-dark dark:text-light hover:text-primary dark:hover:text-primaryDark transition-colors"
+              aria-label={title}
+            >
+              <CgWebsite size={40} />
+            </Link>
+          )}
+          {client_side && (
+            <Link
+              href={client_side}
+              target={"_blank"}
+              className="ms-4 my-2 w-8 md:w-6 text-dark dark:text-light hover:text-primary dark:hover:text-primaryDark transition-colors"
+              aria-label={title}
+            >
+              <SiGithub size={40} />
+            </Link>
+          )}
+          {server_side && (
+            <Link
+              href={server_side}
+              target={"_blank"}
+              className="ms-4 my-2 w-8 md:w-6 text-dark dark:text-light hover:text-primary dark:hover:text-primaryDark transition-colors"
+              aria-label={title}
+            >
+              <FaServer size={40} />
+            </Link>
+          )}
         </div>
       </div>
     </article>
@@ -188,7 +189,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects Page | MD Sadat Khan </title>
+        <title>Projects Page | MD Sadat Khan</title>
         <meta
           name="description"
           content="Explore the freshest web application projects by a Next.js specialist proficient in React.js and full-stack development. Dive into software engineering articles and tutorials offering insights for crafting your personal portfolio."
@@ -201,74 +202,101 @@ export default function Projects() {
       >
         <Layout className="pt-16">
           <AnimatedText
-            text="My Latest Project"
+            text="My Latest Projects"
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+            {/* MDL Real Estate - Featured */}
             <div className="col-span-12">
               <FeaturedProject
-                type="Web Application"
-                title="Parcel Management System"
-                summary="Streamline parcel logistics effortlessly with our intuitive web application, offering three distinct roles: user, delivery personnel, and admin. Seamlessly manage registrations, bookings, and deliveries through user-friendly interfaces. From user registration to parcel booking, our platform ensures a smooth experience for all. Experience convenience at its best with a visually appealing and user-centric home page, making parcel management a breeze."
-                img={proj1}
-                technology ="React, Tailwind ,DaisyUI , Express.js, Mongodb, Firebase , JWT ,Stripe"
-                link="https://sadatfast.web.app/"
-                client_side="https://github.com/sadatcse/Parcel-Management-System-Client-side"
-                server_side="https://github.com/sadatcse/Parcel-Management-Website-Server-Side-"
+                type="Full Stack Web Application"
+                title="Mohammadi Developers Limited (MDL)"
+                summary="Welcome to the official web application for Mohammadi Developers Ltd (MDL), a premier real estate development company. This platform showcases luxury residential and commercial properties, corporate achievements, and structural services. It features a fully responsive client-facing site and a secure administrative dashboard."
+                img={imgMDL}
+                technology="Next.js 16 (App Router), React 19, Tailwind CSS v4, MongoDB (Mongoose), Jose (JWT), Bcrypt.js, Framer Motion"
+                link="https://mdl-wo28.vercel.app/"
+                client_side="https://github.com/sadatcse/MDL"
               />
             </div>
+
+            {/* Multigym v2.0 - Normal */}
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Website with Dashboard"
-                title="Restrurant Buffet Website"
-                img={proj2}
-                technology ="React,Tailwind,Nodejs,Expressjs,Mongodb,Firebase"
-                summary="The Yum Yum Tree Buffet & Restaurant Website offers a delightful experience with a welcoming homepage, comprehensive menu, and seamless user authentication. Enjoy easy access to menu updates, additions, and removals for an enhanced dining journey."
-                link="https://myliverestrurant.web.app/"
-                client_side="https://github.com/sadatcse/Restaurant-Website-Yum-Yum-Tree-Buffet-Client-side-"
-                server_side="https://github.com/sadatcse/Restaurant-Website-Yum-Yum-Tree-Buffet-server-side-"
+                type="Full Stack Web Application"
+                title="Multigym Premium v2.0"
+                summary="A comprehensive, full-stack gym management system showcasing a premium gym facility. Features dynamic content management, trainer profiles, class scheduling, and role-based client & admin dashboards."
+                img={imgMultigymNextJs}
+                technology="Next.js 16 (App Router), Tailwind CSS, DaisyUI, MongoDB (Mongoose), Firebase Auth, JWT, TanStack React Query, Framer Motion"
+                link="https://mgmp-next.vercel.app/"
+                client_side="https://github.com/sadatcse/MGMP-NEXT"
               />
             </div>
+
+            {/* Chef's Special - Normal */}
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="Web Application"
+                title="Chef's Special Restaurant"
+                summary="A premium, modern restaurant web application featuring dynamic menus, online table reservation, slider banners, E-Commerce shop, and ultra-smooth animations powered by GSAP and AOS."
+                img={imgChefSpecial}
+                technology="React 19, Vite, TypeScript, Bootstrap 5, GSAP, AOS, Swiper, React Router, React Helmet"
+                link="https://chefspecial.vercel.app/"
+                client_side="https://github.com/sadatcse/Chefspecial"
+              />
+            </div>
+
+            {/* Data IT - Featured */}
+            <div className="col-span-12">
+              <FeaturedProject
+                type="Agency Portfolio & Software Platform"
+                title="Data IT"
+                summary="A premium agency portfolio showcasing digital services and software solutions. Features dynamic SEO, interactive contact system with CAPTCHA, job careers portal, and comprehensive service portfolios."
+                img={imgDataIT}
+                technology="React, Vite, Tailwind CSS, DaisyUI, Framer Motion, EmailJS, SweetAlert2, React Helmet Async"
+                link="https://www.datait.com.bd/"
+                client_side="https://github.com/sadatcse/Data-IT"
+              />
+            </div>
+
+            {/* Skyroot Real Estate - Normal */}
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="Web Application"
+                title="Skyroot Real Estate"
+                summary="A high-performance real estate platform featuring smooth Framer Motion animations, property directories, and an interactive AI real estate assistant powered by Google Gemini."
+                img={imgSkyroot}
+                technology="React 19, Vite, Tailwind CSS v4, Framer Motion, Google Gemini AI, DaisyUI"
+                link="https://skyroot-two.vercel.app/"
+                client_side="https://github.com/sadatcse/Skyroot"
+              />
+            </div>
+
+            {/* ResilientSlope - Normal */}
             <div className="col-span-6 sm:col-span-12">
               <Project
                 type="Website"
-                title="Brand Shop"
-                summary="Hydrabad Technology offers a seamless user experience with individualized cart data, secure registration/login, informative error alerts, and exclusive access to protected content. With a unique, customizable service design powered by MongoDB, dynamic animations, and automatic copyright updates, our site prioritizes user convenience and innovation."
-                img={proj3}
-                technology ="React,Tailwind,Nodejs,Expressjs,Mongodb,Firebase"
-                link="https://some-code-error-but99ok.surge.sh/"
-                client_side="https://github.com/sadatcse/Hydrabad-Technology-Brand-Shop-Client-side-"
-                server_side="https://github.com/sadatcse/Hydrabad-Technology-Brand-Shop-Server-side"
+                title="ResilientSlope"
+                summary="A professional engineering and consulting website featuring dynamic project pages, interactive service categories with AOS animations, and custom contact forms validated with SweetAlert2."
+                img={imgResilientSlope}
+                technology="React, Tailwind CSS, AOS, SweetAlert2"
+                link="https://www.resilientslope.com/"
+                client_side="https://github.com/sadatcse/ResilientSlope"
               />
             </div>
-            {/* <div className="col-span-12">
+
+            {/* Multigym v1.0 - Featured */}
+            <div className="col-span-12">
               <FeaturedProject
-                type="Portfolio Website"
-                title="React Portfolio Website"
-                summary="A professional portfolio website using React JS, Framer-motion, and Styled-components. It has smooth page transitions, cool background effects, unique design and it is mobile responsive."
-                img={proj4}
-                link="https://devdreaming.com/videos/build-stunning-portfolio-website-react-js-framer-motion"
-                github="https://github.com/sadatcse/react-portfolio-final"
+                type="Full Stack Web Application"
+                title="Multigym Premium v1.0"
+                summary="A full-stack gym platform featuring class schedules, trainer rosters, interactive client registration portals, and robust backend service integration."
+                img={imgMultigym}
+                technology="React, Tailwind CSS, Node.js, Express.js, MongoDB, Firebase"
+                link="https://www.multigympremium.com/"
+                client_side="https://github.com/sadatcse/GYM-Website"
+                server_side="https://github.com/sadatcse/multigym-premium-server"
               />
-            </div> */}
-            {/* <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Website Template"
-                img={proj5}
-                title="Agency Website Template"
-                link="https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap"
-                github="https://github.com/sadatcse/wibe-studio"
-              />
-            </div> */}
-            {/* <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Blog Website"
-                img={proj6}
-                title="DevDreaming"
-                link="https://devdreaming.com"
-                github="https://github.com/sadatcse"
-              />
-            </div> */}
+            </div>
           </div>
         </Layout>
       </main>

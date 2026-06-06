@@ -1,0 +1,72 @@
+# Multigym Premium (MGMP) - Next.js
+
+Welcome to the **Multigym Premium** repository. This is a comprehensive, full-stack Next.js web application for managing and showcasing a premium gym facility.
+
+## 🚀 Overview
+
+Multigym Premium is built to provide an exceptional digital experience for our gym members. It features a modern, responsive user interface with engaging animations, a fully-featured member dashboard, class scheduling, trainer profiles, and a blog/news section.
+
+## 💻 Tech Stack
+
+This project leverages modern web technologies to deliver a fast, secure, and highly interactive experience:
+
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router architecture)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) & [DaisyUI](https://daisyui.com/)
+- **Database:** MongoDB with [Mongoose](https://mongoosejs.com/)
+- **Authentication:** [Firebase Auth](https://firebase.google.com/docs/auth) & JWT (JSON Web Tokens)
+- **Forms & Validation:** [React Hook Form](https://react-hook-form.com/) & [Yup](https://github.com/jquense/yup)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/) & [AOS](https://michalsnik.github.io/aos/) (Animate On Scroll)
+- **UI Components:** [Headless UI](https://headlessui.com/), [Material UI (MUI)](https://mui.com/), [Swiper](https://swiperjs.com/) for sliders
+- **Data Fetching:** [TanStack React Query](https://tanstack.com/query/latest) & [Axios](https://axios-http.com/)
+- **Notifications:** [React Toastify](https://fkhadra.github.io/react-toastify/) & [SweetAlert2](https://sweetalert2.github.io/)
+
+## ✨ Key Features
+
+- **Responsive Design:** Optimized for all devices—mobile, tablet, and desktop.
+- **Dynamic Content:** Blog, news, notices, and trainer profiles managed via the admin dashboard.
+- **Secure Authentication:** Integrated with Firebase and custom JWT tokens for role-based access control (Admin vs. Member).
+- **Admin Dashboard:** Comprehensive tools to create and edit blogs, notices, team members, testimonials, and workout setups.
+- **Rich Media & Content:** Uses React Quill for rich text editing and supports image/video uploads.
+
+## 🛠 Getting Started
+
+To get a local copy up and running, follow these simple steps:
+
+### Prerequisites
+
+Make sure you have Node.js (version 18 or higher recommended) and npm (or yarn/pnpm/bun) installed.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sadatcse/MGMP-NEXT.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd "Multigym -premium.com - Copy/Nextjs"
+   ```
+
+3. Install NPM packages:
+   ```bash
+   npm install
+   ```
+
+4. Set up environment variables:
+   Ensure you have a `.env` file in the root directory and add your specific configuration variables (MongoDB URI, Firebase credentials, JWT Secret, etc.).
+
+5. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/sadatcse/MGMP-NEXT/issues).
+
+## 📄 License
+
+This project is proprietary software for Multigym Premium. All rights reserved.
