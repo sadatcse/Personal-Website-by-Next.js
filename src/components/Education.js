@@ -45,8 +45,7 @@ const Education = () => {
         <ul className="w-full flex flex-col items-start justify-between ml-4">
           <Details
             type="Bachelor of Science in Computer Science"
-            time="2012-2019"
-            place="Southeast University Bangladesh"
+            place="University of Southasia, Amin Bazar, Dhaka "
             info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial Intelligence."
           />
 
