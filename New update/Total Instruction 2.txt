@@ -1,0 +1,19 @@
+New data 
+
+Resturant
+
+Live link https://teaxo-pos-client.vercel.app/
+
+GitHub Frontend https://github.com/sadatcse/Teaxo-Pos--client
+GitHub Backend  https://github.com/sadatcse/Texao-a-back
+
+Resturant.jpg
+
+
+Doctor 
+
+Live link :https://data-rx-frontend.vercel.app/demo-login
+GitHub Backend https://github.com/sadatcse/Data-Rx-Backend
+GitHub Frontend  https://github.com/sadatcse/DataRX-Frontend
+
+Doctor.jpg

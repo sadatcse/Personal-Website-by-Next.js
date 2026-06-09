@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import imgResturant from "../../public/images/projects/Resturant.jpg";
+import imgDoctor from "../../public/images/projects/Doctor.jpg";
 import imgMDL from "../../public/images/projects/MDL.jpg";
 import imgMultigymNextJs from "../../public/images/projects/multigym-next-js.jpg";
 import imgChefSpecial from "../../public/images/projects/chefs-special.png";
@@ -12,7 +14,7 @@ import imgDataIT from "../../public/images/projects/DataIT.jpg";
 import imgSkyroot from "../../public/images/projects/Skyroot.jpg";
 import imgResilientSlope from "../../public/images/projects/ResilientSlope.jpg";
 import imgMultigym from "../../public/images/projects/multigym.png";
-import { CgWebsite  } from "react-icons/cg";
+import { CgWebsite } from "react-icons/cg";
 import { SiGithub } from "react-icons/si";
 import { FaServer } from "react-icons/fa";
 
@@ -23,7 +25,7 @@ import TransitionEffect from "@/components/TransitionEffect";
 
 const FramerImage = motion(Image);
 
-const FeaturedProject = ({ type, title, summary, img, link, client_side ,server_side,technology }) => {
+const FeaturedProject = ({ type, title, summary, img, link, client_side, server_side, technology }) => {
 
   return (
     <article
@@ -109,7 +111,7 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
   );
 };
 
-const Project = ({ title, type, img, link, technology,summary,client_side,server_side }) => {
+const Project = ({ title, type, img, link, technology, summary, client_side, server_side }) => {
 
   return (
     <article
@@ -144,8 +146,8 @@ const Project = ({ title, type, img, link, technology,summary,client_side,server
         <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl ">
           {title} <span className="text-xl font-medium text-primary dark:text-primaryDark lg:text-lg md:text-base">{type}</span>
         </h2>
-        
-       
+
+
         <p className="my-2 rounded-md font-medium  text-dark dark:text-light sm:text-sm">Technology Use :{technology}</p>
 
         <div className="flex w-full items-center justify-start mt-2">
@@ -206,10 +208,38 @@ export default function Projects() {
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+            {/* Teaxo POS - Featured */}
+            <div className="col-span-12">
+              <FeaturedProject
+                type="Smart POS & Restaurant Management System"
+                title="Teaxo POS"
+                summary="A state-of-the-art, feature-rich Point of Sale (POS) and comprehensive restaurant operation management client. It features real-time kitchen display synchronization using Socket.io, recipe/ingredient costing, vendor ledgers, granular role-based access control (RBAC), and AI-powered daily sales forecasting. Fully functional offline using IndexedDB (Dexie.js) and Progressive Web App (PWA) technologies."
+                img={imgResturant}
+                technology="React 18, React Router v7, Tailwind CSS v3, DaisyUI, Socket.io, Dexie.js (IndexedDB), Axios, Recharts, JSPDF, Moment.js"
+                link="https://teaxo-pos-client.vercel.app/"
+                client_side="https://github.com/sadatcse/Teaxo-Pos--client"
+                server_side="https://github.com/sadatcse/Texao-a-back"
+              />
+            </div>
+
+            {/* DataIT RX - Featured */}
+            <div className="col-span-12">
+              <FeaturedProject
+                type="Healthcare Dashboard & Prescription System"
+                title="DataIT RX"
+                summary="A hybrid clinic management and prescription generation dashboard designed for doctors and clinical assistants. Built with an offline-first hybrid architecture, it uses Dexie.js (IndexedDB) with a serialized sync queue, client-side AES-256 cryptographic security to protect patient vitals and history transparently at rest, and dynamic action-level role-based permissions (RBAC)."
+                img={imgDoctor}
+                technology="React 18, React Router v7, Tailwind CSS, DaisyUI, Dexie.js, Crypto-JS (AES), Axios, Recharts, Moment.js"
+                link="https://data-rx-frontend.vercel.app/demo-login"
+                client_side="https://github.com/sadatcse/DataRX-Frontend"
+                server_side="https://github.com/sadatcse/Data-Rx-Backend"
+              />
+            </div>
+
             {/* MDL Real Estate - Featured */}
             <div className="col-span-12">
               <FeaturedProject
-                type="Full Stack Web Application"
+                type="Company Website with Dashboard Admin"
                 title="Mohammadi Developers Limited (MDL)"
                 summary="Welcome to the official web application for Mohammadi Developers Ltd (MDL), a premier real estate development company. This platform showcases luxury residential and commercial properties, corporate achievements, and structural services. It features a fully responsive client-facing site and a secure administrative dashboard."
                 img={imgMDL}
@@ -222,7 +252,7 @@ export default function Projects() {
             {/* Multigym v2.0 - Normal */}
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Full Stack Web Application"
+                type="Website with Dashboard Admin & AI Chatbot"
                 title="Multigym Premium v2.0"
                 summary="A comprehensive, full-stack gym management system showcasing a premium gym facility. Features dynamic content management, trainer profiles, class scheduling, and role-based client & admin dashboards."
                 img={imgMultigymNextJs}
@@ -235,7 +265,7 @@ export default function Projects() {
             {/* Chef's Special - Normal */}
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Web Application"
+                type="Restaurant Website"
                 title="Chef's Special Restaurant"
                 summary="A premium, modern restaurant web application featuring dynamic menus, online table reservation, slider banners, E-Commerce shop, and ultra-smooth animations powered by GSAP and AOS."
                 img={imgChefSpecial}
@@ -261,7 +291,7 @@ export default function Projects() {
             {/* Skyroot Real Estate - Normal */}
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Web Application"
+                type="Company Website "
                 title="Skyroot Real Estate"
                 summary="A high-performance real estate platform featuring smooth Framer Motion animations, property directories, and an interactive AI real estate assistant powered by Google Gemini."
                 img={imgSkyroot}
@@ -287,7 +317,7 @@ export default function Projects() {
             {/* Multigym v1.0 - Featured */}
             <div className="col-span-12">
               <FeaturedProject
-                type="Full Stack Web Application"
+                type="Website With Dashboard Admin"
                 title="Multigym Premium v1.0"
                 summary="A full-stack gym platform featuring class schedules, trainer rosters, interactive client registration portals, and robust backend service integration."
                 img={imgMultigym}
