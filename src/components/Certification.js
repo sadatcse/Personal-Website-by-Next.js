@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import LiIcon from "./LiIcon";
 
-const Details = ({ title, issuer, issuerLink, time, credentialId, description }) => {
+const Details = ({ title, issuer, issuerLink, time, credentialId, certificateLink, description }) => {
   const ref = useRef(null);
   return (
     <li
@@ -30,6 +30,20 @@ const Details = ({ title, issuer, issuerLink, time, credentialId, description })
           {time}
           {credentialId && (
             <> &mdash; <span className="text-xs tracking-wide">ID: {credentialId}</span></>
+          )}
+          {certificateLink && (
+            <>
+              {" "}
+              &mdash;{" "}
+              <a
+                href={certificateLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline text-primary dark:text-primaryDark"
+              >
+                View Certificate
+              </a>
+            </>
           )}
         </span>
         <p className="font-medium w-full md:text-sm mt-1">{description}</p>
@@ -60,30 +74,23 @@ const Certification = () => {
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
 
           <Details
-            title="Full Stack Web Development"
+            title="Next.js 14 & React - The Complete Guide"
             issuer="Udemy"
-            issuerLink="https://www.udemy.com/"
-            time="2024 · Certificate of Completion"
-            credentialId="UC-2024-FSW-001"
-            description="Completed an intensive full-stack web development course covering HTML, CSS, JavaScript, React.js, Node.js, Express.js, MongoDB, and REST API design. Built multiple real-world projects including an e-commerce platform and a social media application."
+            issuerLink="https://ude.my/UC-e5d69f65-7fe0-4e0d-8b86-979ec6547253"
+            time="March 2024 · Certificate of Completion"
+            credentialId="UC-e5d69f65-7fe0-4e0d-8b86-979ec6547253"
+            certificateLink="/images/certificates/udemy-nextjs-react.jpg"
+            description="Mastered React and Next.js, including the App Router, Server Components, Server Actions, Client Components, routing, page rendering, state management, security, and authentication. Acquired deep knowledge of React Hooks, Context API, and state optimization."
           />
 
           <Details
-            title="React & Next.js – The Complete Guide"
-            issuer="Coursera"
-            issuerLink="https://www.coursera.org/"
-            time="2023 · Professional Certificate"
-            credentialId="CRS-2023-RNJSG-482"
-            description="Mastered modern React including hooks, context API, server-side rendering with Next.js, dynamic routing, and deployment strategies. Earned a verified professional certificate upon successful completion of all projects and assessments."
-          />
-
-          <Details
-            title="UI/UX Design Fundamentals"
-            issuer="Google"
-            issuerLink="https://grow.google/"
-            time="2023 · Google Career Certificate"
-            credentialId="GGL-UX-2023-00921"
-            description="Gained foundational knowledge in user-centred design, wireframing, prototyping, and usability testing using Figma. Learned design thinking principles and how to apply them to build accessible, beautiful, and functional digital products."
+            title="Complete Web Development Course"
+            issuer="Programming Hero"
+            issuerLink="https://web.programming-hero.com/"
+            time="2023 · Certificate of Achievement"
+            credentialId="WEB8-3195"
+            certificateLink="/images/certificates/programming-hero-web-development.png"
+            description="Completed an intensive web development course covering HTML5, CSS3, Bootstrap, Tailwind CSS, JavaScript (ES6), React, Node.js, Express.js, MongoDB, and deployment. Built multiple full-stack projects and gained hands-on experience in modern web technologies."
           />
 
         </ul>
